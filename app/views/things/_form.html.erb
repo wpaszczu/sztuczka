@@ -1,0 +1,21 @@
+<%= simple_form_for @thing, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :foto, as: :file %>
+
+  <%= f.input :title %>
+
+  <%= f.input :opisik %>
+
+  <%= f.input :opis %>
+
+  <%= f.input :meta %>
+
+  <%= f.input :recenzja %>
+
+  <%= f.input :rodzaj %>
+
+
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                things_path, :class => 'btn btn-default' %>
+<% end %>
