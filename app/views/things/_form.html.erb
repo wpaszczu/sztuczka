@@ -1,6 +1,11 @@
 <%= simple_form_for @thing, :html => { :class => 'form-horizontal' } do |f| %>
   <%= f.input :foto, as: :file %>
 
+
+<%= image_tag @thing.foto.url(:thumb) %>
+
+
+<br>
   <%= f.input :title %>
 
   <%= f.input :opisik %>

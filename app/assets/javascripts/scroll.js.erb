@@ -1,0 +1,19 @@
+var iScrollPos = 0;
+
+	$(window).scroll(function () {
+
+	    var iCurScrollPos = $(this).scrollTop();
+
+	    if (iCurScrollPos > iScrollPos) {
+
+	        $(".nav").hide();
+
+	    } else {
+
+	      $(".nav").show();
+
+	    }
+
+	    iScrollPos = iCurScrollPos;
+
+	});

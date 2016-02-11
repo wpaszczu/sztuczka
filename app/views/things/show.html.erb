@@ -1,32 +1,35 @@
 <%- model_class = Thing -%>
-<div class="page-header">
-  <h1><%= @thing.title %></h1>
+
+<div class="col-md-6 fotos"><%= image_tag @thing.foto.url(:medium), :class => 'img-responsive' %></div>
+<div class="col-md-6">
+<div class="panel panel-default ">
+
+
+  <div class="panel-body"><h2><%= @thing.title %></h2></div>
+
+  <div class="panel-body"><%= @thing.opisik %></div>
+</div>
+<div class="btn btn-default btn-circle btn-xl poka1 "><%= model_class.human_attribute_name(:opis) %></div>
+<div class="btn btn-default btn-circle btn-xl poka2"><%= model_class.human_attribute_name(:meta) %></div>
+<div class="btn btn-default btn-circle btn-xl poka3"><%= model_class.human_attribute_name(:recenzja) %></div>
+
+  <div class=" znik1"><%= @thing.opis %></div>
+
+  <div class=" znik2"><%= @thing.meta %></div>
+
+  <div class=" znik3"><%= @thing.recenzja %></div>
+
+
 </div>
 
-<dl class="dl-horizontal">
-  <dd><%= image_tag @thing.foto.url(:medium) %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
-  <dd><%= @thing.title %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:opisik) %>:</strong></dt>
-  <dd><%= @thing.opisik %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:opis) %>:</strong></dt>
-  <dd><%= @thing.opis %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:meta) %>:</strong></dt>
-  <dd><%= @thing.meta %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:recenzja) %>:</strong></dt>
-  <dd><%= @thing.recenzja %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:rodzaj) %>:</strong></dt>
-  <dd><%= @thing.rodzaj %></dd>
-
-</dl>
-
-
+<!--
 <%= link_to t('.back', :default => t("helpers.links.back")),
-              things_path, :class => 'btn btn-default'  %>
+              things_path, :class => 'btn btn-default btn-circle btn-xl'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_thing_path(@thing), :class => 'btn btn-default' %>
+              edit_thing_path(@thing), :class => 'btn btn-default btn-circle btn-xl' %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               thing_path(@thing),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-              :class => 'btn btn-danger' %>
+              :class => 'btn btn-danger btn-circle btn-xl' %> -->
+</div> <!-- koniec col-md-6 -->
