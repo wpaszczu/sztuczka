@@ -2,18 +2,26 @@ var iScrollPos = 0;
 
 	$(window).scroll(function () {
 
+
+		//ten kod sprawdza scroll
+
 	    var iCurScrollPos = $(this).scrollTop();
-
+			//jesli ruch w dół > zniknij nav
 	    if (iCurScrollPos > iScrollPos) {
-
 	        $(".nav").hide();
-
+			//jesli ruch w górę > pokaż nav
 	    } else {
-
 	      $(".nav").show();
-
 	    }
-
 	    iScrollPos = iCurScrollPos;
+
+		//ten kod sprawdza czy jesteśmy na samym dole strony > pokaż naw
+
+			var scrollHeight = $(document).height();
+			var scrollPosition = $(window).height() + $(window).scrollTop();
+			if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+			    $(".nav").show();
+			}
+
 
 	});
