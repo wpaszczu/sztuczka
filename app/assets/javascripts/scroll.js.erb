@@ -3,25 +3,29 @@ var iScrollPos = 0;
 	$(window).scroll(function () {
 
 
-		//ten kod sprawdza scroll
+		//this code check scroll
 
 	    var iCurScrollPos = $(this).scrollTop();
-			//jesli ruch w dół > zniknij nav
+			//if go down > hide nav
 	    if (iCurScrollPos > iScrollPos) {
 	        $(".nav").hide();
-			//jesli ruch w górę > pokaż nav
+			//if go up > show nav
 	    } else {
 	      $(".nav").show();
 	    }
 	    iScrollPos = iCurScrollPos;
 
-		//ten kod sprawdza czy jesteśmy na samym dole strony > pokaż naw
+
+		//this code check if we are on bottom > show naw
 
 			var scrollHeight = $(document).height();
 			var scrollPosition = $(window).height() + $(window).scrollTop();
 			if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
 			    $(".nav").show();
 			}
+
+
+
 
 
 	});

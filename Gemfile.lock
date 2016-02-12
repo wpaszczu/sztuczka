@@ -92,6 +92,7 @@ GEM
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
+    jquery-mobile-rails-assets (1.4.5)
     jquery-rails (4.1.0)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -196,6 +197,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   jbuilder (~> 2.0)
+  jquery-mobile-rails-assets
   jquery-rails
   paperclip!
   rails (= 4.2.4)

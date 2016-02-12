@@ -4,8 +4,8 @@
 </div>
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_thing_path,
-            :class => 'btn btn-primary' %>
-<table class="table table-striped">
+            :class => 'btn btn-primary animsition-link' %>
+<table class="table">
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
@@ -23,24 +23,24 @@
   <tbody >
     <% @things.each do |thing| %>
       <tr class="jeden-opis">
-        <td><%= link_to thing.id, thing_path(thing) %></td>
+        <td><%= link_to thing.id, thing_path(thing), class: "animsition-link" %></td>
         <td class="foto"><%= image_tag thing.foto.url(:kolo), :class => 'img-circle'%></td>
         <td><%= thing.title %></td>
-        <td><%= thing.opisik %></td>
-        <td><%= thing.opis %></td>
-        <td><%= thing.meta %></td>
-        <td><%= thing.recenzja %></td>
+        <td><%= thing.opisik.first(80) %></td>
+        <td><%= thing.opis.first(80) %></td>
+        <td><%= thing.meta.first(80) %></td>
+        <td><%= thing.recenzja.first(80) %></td>
         <td><%= thing.rodzaj %></td>
 
         <td>
-          <%= link_to 'Show', thing_path(thing), :class => 'btn btn-default btn-xs btn-circle' %>
+          <%= link_to 'Show', thing_path(thing), :class => 'btn btn-default btn-xs btn-circle animsition-link' %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_thing_path(thing), :class => 'btn btn-default btn-xs btn-circle' %>
+                      edit_thing_path(thing), :class => 'btn btn-default btn-xs btn-circle animsition-link' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       thing_path(thing),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-xs btn-danger btn-circle' %>
+                      :class => 'btn btn-xs btn-danger btn-circle animsition-link' %>
         </td>
       </tr>
     <% end %>
