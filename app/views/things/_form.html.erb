@@ -16,7 +16,9 @@
 
   <%= f.input :recenzja %>
 
-  <%= f.input :rodzaj %>
+
+  <%= f.input :rodzaj, as: :radio_buttons,
+  collection: ['spektakl', 'warsztat', 'specjalny'] %>
 
 
 

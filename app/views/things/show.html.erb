@@ -2,13 +2,13 @@
 
 <div class="col-md-6 fotos"><%= image_tag @thing.foto.url(:medium), :class => 'img-responsive' %></div>
 <div class="col-md-6">
-<div class="panel panel-default ">
+
 
 
   <div class="panel-body"><h2><%= @thing.title %></h2></div>
 
   <div class="panel-body"><%= @thing.opisik %></div>
-</div>
+
 <div class="btn btn-default btn-circle btn-xl poka1 "><%= model_class.human_attribute_name(:opis) %></div>
 <div class="btn btn-default btn-circle btn-xl poka2"><%= model_class.human_attribute_name(:meta) %></div>
 <div class="btn btn-default btn-circle btn-xl poka3"><%= model_class.human_attribute_name(:recenzja) %></div>

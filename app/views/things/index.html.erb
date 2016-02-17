@@ -4,17 +4,17 @@
 </div>
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_thing_path,
-            :class => 'btn btn-primary animsition-link' %>
+            :class => 'btn btn-circle btn-xl btn-primary animsition-link' %>
 <table class="table">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
+
       <th></th>
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:opisik) %></th>
-      <th><%= model_class.human_attribute_name(:opis) %></th>
+
       <th><%= model_class.human_attribute_name(:meta) %></th>
-      <th><%= model_class.human_attribute_name(:recenzja) %></th>
+
       <th><%= model_class.human_attribute_name(:rodzaj) %></th>
 
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
@@ -23,24 +23,25 @@
   <tbody >
     <% @things.each do |thing| %>
       <tr class="jeden-opis">
-        <td><%= link_to thing.id, thing_path(thing), class: "animsition-link" %></td>
-        <td class="foto"><%= image_tag thing.foto.url(:kolo), :class => 'img-circle'%></td>
+
+        <td class="foto">
+        <%= link_to image_tag(thing.foto.url(:kolo), class: 'img-circle'), thing_path(thing), class: 'animsition-link'%></td>
         <td><%= thing.title %></td>
-        <td><%= thing.opisik.first(80) %></td>
-        <td><%= thing.opis.first(80) %></td>
-        <td><%= thing.meta.first(80) %></td>
-        <td><%= thing.recenzja.first(80) %></td>
+        <td><%= thing.opisik.first(280) %></td>
+
+        <td><%= thing.meta.first(280) %></td>
+
         <td><%= thing.rodzaj %></td>
 
         <td>
-          <%= link_to 'Show', thing_path(thing), :class => 'btn btn-default btn-xs btn-circle animsition-link' %>
+          <%= link_to 'Show', thing_path(thing), :class => 'btn btn-default btn-lg btn-circle animsition-link' %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_thing_path(thing), :class => 'btn btn-default btn-xs btn-circle animsition-link' %>
+                      edit_thing_path(thing), :class => 'btn btn-default btn-warning btn-lg btn-circle animsition-link' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       thing_path(thing),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-xs btn-danger btn-circle animsition-link' %>
+                      :class => 'btn btn-lg btn-danger btn-circle animsition-link' %>
         </td>
       </tr>
     <% end %>
