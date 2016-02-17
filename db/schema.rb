@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160210154414) do
+ActiveRecord::Schema.define(version: 20160217133152) do
 
   create_table "things", force: :cascade do |t|
     t.string   "title"
@@ -20,12 +20,20 @@ ActiveRecord::Schema.define(version: 20160210154414) do
     t.text     "meta"
     t.text     "recenzja"
     t.string   "rodzaj"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.string   "foto_file_name"
     t.string   "foto_content_type"
     t.integer  "foto_file_size"
     t.datetime "foto_updated_at"
+    t.string   "foto2_file_name"
+    t.string   "foto2_content_type"
+    t.integer  "foto2_file_size"
+    t.datetime "foto2_updated_at"
+    t.string   "foto3_file_name"
+    t.string   "foto3_content_type"
+    t.integer  "foto3_file_size"
+    t.datetime "foto3_updated_at"
   end
 
   create_table "users", force: :cascade do |t|
