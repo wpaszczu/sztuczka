@@ -35,7 +35,7 @@
 
   <div class="panel-body"><h2><%= @thing.title %></h2></div>
 
-  <div class="panel-body"><%= @thing.opisik %></div>
+  <div class="panel-body"><%= simple_format(@thing.opisik) %></div>
 
 <div class="btn btn-default btn-circle btn-xl poka1 "><%= model_class.human_attribute_name(:opis) %></div>
 <div class="btn btn-default btn-circle btn-xl poka2"><%= model_class.human_attribute_name(:meta) %></div>
@@ -43,7 +43,7 @@
 
   <div class=" znik1"><%= @thing.opis %></div>
 
-  <div class=" znik2"><%= @thing.meta %></div>
+  <div class=" znik2"><%= simple_format(@thing.meta) %></div>
 
   <div class=" znik3"><%= @thing.recenzja %></div>
 
