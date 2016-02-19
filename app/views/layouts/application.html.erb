@@ -11,7 +11,12 @@
 </head>
 <body>
 <div class="animsition">
+<% if current_user %>
+<%= render 'layouts/header' %>
+<% end %>
+
 <%= render 'layouts/menu' %>
+
 
 <div class="container">
 <%= yield %>

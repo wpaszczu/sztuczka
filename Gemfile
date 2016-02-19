@@ -50,3 +50,4 @@ gem 'simple_form'
 gem 'devise'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'jquery-mobile-rails-assets'
+gem 'devise-bootstrap-views' #bootstrap only for devise vievs

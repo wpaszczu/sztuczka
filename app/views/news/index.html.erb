@@ -21,6 +21,8 @@
         <td>  <%= link_to image_tag(news.foto_news.url(:kolo), class: 'img-circle'), news_path(news)%></td>
         <td><%= news.co %></td>
         <td><%= news.czego %></td>
+        <% if current_user %>
+
         <td>
           <td><%= link_to 'show', news_path(news), :class => 'btn btn-default btn-lg btn-circle '  %></td>
         <td>  <%= link_to 'edit', edit_news_path(news), :class => 'btn btn-warning btn-lg btn-circle' %></td>
@@ -29,6 +31,7 @@
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                       :class => 'btn btn-lg btn-circle btn-danger' %>
         </td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

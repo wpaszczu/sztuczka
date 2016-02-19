@@ -1,7 +1,3 @@
-<%- model_class = Thing -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
-</div>
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_thing_path,
             :class => 'btn btn-circle btn-xl btn-primary ' %>
@@ -10,12 +6,12 @@
     <tr>
 
       <th></th>
-      <th><%= model_class.human_attribute_name(:title) %></th>
-      <th><%= model_class.human_attribute_name(:opisik) %></th>
+      <th><%= :title %></th>
+      <th><%= :opisik %></th>
 
-      <th><%= model_class.human_attribute_name(:meta) %></th>
+      <th><%= :meta %></th>
 
-      <th><%= model_class.human_attribute_name(:rodzaj) %></th>
+      <th><%= :rodzaj %></th>
 
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>

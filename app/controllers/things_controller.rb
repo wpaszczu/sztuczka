@@ -5,7 +5,7 @@ class ThingsController < ApplicationController
   # GET /things
   # GET /things.json
   def index
-    @things = Thing.all.where(rodzaj: 'spektakl')
+    @things = Thing.all
   end
 
   # GET /things/1
