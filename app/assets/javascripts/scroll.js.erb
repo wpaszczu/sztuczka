@@ -8,10 +8,10 @@ var iScrollPos = 0;
 	    var iCurScrollPos = $(this).scrollTop();
 			//if go down > hide nav
 	    if (iCurScrollPos > iScrollPos) {
-	        $(".nav").hide();
+	        $(".menu").hide();
 			//if go up > show nav
 	    } else {
-	      $(".nav").show();
+	      $(".menu").show();
 	    }
 	    iScrollPos = iCurScrollPos;
 
@@ -21,7 +21,7 @@ var iScrollPos = 0;
 			var scrollHeight = $(document).height();
 			var scrollPosition = $(window).height() + $(window).scrollTop();
 			if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-			    $(".nav").show();
+			    $(".menu").show();
 			}
 
 
