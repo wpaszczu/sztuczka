@@ -1,35 +1,35 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = News -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<%= link_to 'new', new_news_path, :class => 'btn btn-circle btn-xl btn-primary' %>
 
-<h1>Listing News</h1>
 
-<table>
+<table class="table ">
   <thead>
     <tr>
-      <th>Co</th>
-      <th>Czego</th>
-      <th>Czas1</th>
-      <th>Czas2</th>
-      <th>Czas3</th>
-      <th colspan="3"></th>
+      <th><%= model_class.human_attribute_name(:co) %></th>
+      <th><%= model_class.human_attribute_name(:czego) %></th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
-
   <tbody>
     <% @news.each do |news| %>
       <tr>
+        <td>  <%= link_to image_tag(news.foto_news.url(:kolo), class: 'img-circle'), news_path(news)%></td>
         <td><%= news.co %></td>
         <td><%= news.czego %></td>
-        <td><%= news.czas1 %></td>
-        <td><%= news.czas2 %></td>
-        <td><%= news.czas3 %></td>
-        <td><%= link_to 'Show', news %></td>
-        <td><%= link_to 'Edit', edit_news_path(news) %></td>
-        <td><%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <td><%= link_to 'show', news_path(news), :class => 'btn btn-default btn-lg btn-circle '  %></td>
+        <td>  <%= link_to 'edit', edit_news_path(news), :class => 'btn btn-warning btn-lg btn-circle' %></td>
+          <td><%= link_to 'destroy', news_path(news),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-lg btn-circle btn-danger' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New News', new_news_path %>

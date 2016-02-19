@@ -1,29 +1,30 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = News -%>
 
-<p>
-  <strong>Co:</strong>
-  <%= @news.co %>
-</p>
+<div class="col-md-6 ">
+    <%= image_tag @news.foto_news.url(:medium), :class => 'img-responsive' %>
+  </div>
+  <div class="col-md-6 ">
 
-<p>
-  <strong>Czego:</strong>
-  <%= @news.czego %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:co) %>:</strong></dt>
+  <dd><%= @news.co %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:czego) %>:</strong></dt>
+  <dd><%= @news.czego %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:czas1) %>:</strong></dt>
+  <dd><%= @news.czas1 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:czas2) %>:</strong></dt>
+  <dd><%= @news.czas2 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:czas3) %>:</strong></dt>
+  <dd><%= @news.czas3 %></dd>
+</dl>
 
-<p>
-  <strong>Czas1:</strong>
-  <%= @news.czas1 %>
-</p>
-
-<p>
-  <strong>Czas2:</strong>
-  <%= @news.czas2 %>
-</p>
-
-<p>
-  <strong>Czas3:</strong>
-  <%= @news.czas3 %>
-</p>
-
-<%= link_to 'Edit', edit_news_path(@news) %> |
-<%= link_to 'Back', news_index_path %>
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              news_index_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_news_path(@news), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              news_path(@news),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

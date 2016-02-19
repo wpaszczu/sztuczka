@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160219114109) do
+ActiveRecord::Schema.define(version: 20160219123316) do
 
   create_table "news", force: :cascade do |t|
     t.text     "co"
@@ -19,8 +19,12 @@ ActiveRecord::Schema.define(version: 20160219114109) do
     t.datetime "czas1"
     t.datetime "czas2"
     t.datetime "czas3"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "foto_news_file_name"
+    t.string   "foto_news_content_type"
+    t.integer  "foto_news_file_size"
+    t.datetime "foto_news_updated_at"
   end
 
   create_table "things", force: :cascade do |t|
