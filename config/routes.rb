@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :things
   resources :news
   root 'news#index'
+  get 'nowy' => 'news#new'
+  get 'new' => 'news#new'
   get 'onas' => 'pages#about'
   get 'kontakt' => 'pages#contact'
   get 'spektakle' => 'pages#spektakle'

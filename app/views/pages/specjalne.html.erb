@@ -1,6 +1,8 @@
+<% if current_user %>
 <%= link_to t('.new', :default => t("helpers.links.new")),
-            new_thing_path,
-            :class => 'btn btn-circle btn-xl btn-primary ' %>
+    new_thing_path,
+    :class => 'btn btn-circle btn-xl btn-primary ' %>
+<% end %>
 <table class="table">
   <thead>
     <tr>
