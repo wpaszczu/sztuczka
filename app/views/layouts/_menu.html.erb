@@ -7,25 +7,34 @@
     		<li>
     			<a class=" btn btn-default btn-circle btn-xl animsition-link trigger right-caret">SPEKTAKLE</a>
     			<ul class="dropdown-menu sub-menu">
-
-    				<li><a class=" btn btn-default btn-circle btn-xl animsition-link" href="#">BOBOBU</a></li>
-    				<li><a class=" btn btn-default btn-circle btn-xl animsition-link" href="#">NANO KA</a></li>
-    				<li><a class=" btn btn-default btn-circle btn-xl animsition-link" href="#">FIU FIU</a></li>
-    			</ul>
+    <% $spektakle.each do |thing| %>
+    <li><%= link_to image_tag(thing.foto.url(:kolo), class: 'img-circle'), thing_path(thing), class: ' animsition-link'%></li>
+          <% end %>
+  	</ul>
     		</li>
 
         <li>
-    			<a class=" btn btn-default btn-circle btn-xl animsition-link trigger right-caret">WARSZTATY</a>
-    			<ul class="dropdown-menu sub-menu">
-    				<li><a class=" btn btn-default btn-circle btn-xl animsition-link" href="#">WIDZI MISIE</a></li>
-    				<li><a class=" btn btn-default btn-circle btn-xl animsition-link" href="#">BAWI MISIE</a></li>
-    				<li><a class=" btn btn-default btn-circle btn-xl animsition-link" href="#">MU MISIE</a></li>
-    			</ul>
-    		</li>
+          <a class=" btn btn-default btn-circle btn-xl animsition-link trigger right-caret">WARSZTATY</a>
+          <ul class="dropdown-menu sub-menu">
+    <% $warsztaty.each do |thing| %>
+        <li><%= link_to image_tag(thing.foto.url(:kolo), class: 'img-circle'), thing_path(thing), class: 'animsition-link'%></li>
+    <% end %>
+    </ul>
+        </li>
 
-    		<li><a class=" btn btn-default btn-circle btn-xl animsition-link" href="#">OSOBY</a></li>
-    		<li><a class=" btn btn-default btn-circle btn-xl animsition-link" href="#">KONTAKT</a></li>
-    		<li><a class=" btn btn-default btn-circle btn-xl animsition-link" href="#">O NAS</a></li>
+        <li>
+          <a class=" btn btn-default btn-circle btn-xl animsition-link trigger right-caret">SPECJALNE</a>
+          <ul class="dropdown-menu sub-menu">
+    <% $specjalne.each do |thing| %>
+    <li><%= link_to image_tag(thing.foto.url(:kolo), class: 'img-circle'), thing_path(thing), class: ' animsition-link'%></li>
+    <% end %>
+    </ul>
+        </li>
+
+        <li><%= link_to 'O NAS', onas_path, class: 'btn btn-default btn-circle btn-xl animsition-link'%></li>
+
+
+
     	</ul>
     </div>
 </div> <!-- koniec menu -->

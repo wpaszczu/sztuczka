@@ -33,6 +33,7 @@ padding: 2vw;
   font-size: 12px;
   line-height: 1.428571429;
   border-radius: 15px;
+  border: 5px solid #000;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 .btn-circle.btn-lg {
@@ -48,14 +49,16 @@ padding: 2vw;
   width: 100px;
   height: 100px;
   padding: 2vw 0.8vw;
-  font-size: 1.4vw;
-  line-height: 1.8vw;
+  font-size: 2.0vh;
+  line-height: 2.8vw;
   border-radius: 50px;
   border-color: #000;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-.menu {display: none;}
+
+
+
 tr.jeden-opis {height: 100px!important;}
 h2 { font-size: 300%;}
 
@@ -84,6 +87,12 @@ img { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
 
 
 //dropdown menu styles
+// .menu {display: none;}
+
+.sub-menu li a:hover {background-color: transparent;}
+.sub-menu li a img {  border: 5px solid transparent;}
+.sub-menu li a img:hover {  border: 5px solid #000;}
+
 .menu {position: fixed;
 bottom: 0;
 left: 0;
@@ -100,10 +109,12 @@ z-index: 100;
 	user-select: none;
 	cursor:pointer;
   background-color: transparent;
+  	box-shadow:none;
 }
 .dropdown-menu {
   background-color: transparent;
   border-color: transparent;
+  	box-shadow:none;
 }
 .dropdown-menu .sub-menu {
   background-color: transparent;

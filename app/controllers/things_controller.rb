@@ -1,6 +1,11 @@
 class ThingsController < ApplicationController
   before_action :set_thing, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
+  before_action :menu#Application
+
+
+
+
 
   # GET /things
   # GET /things.json

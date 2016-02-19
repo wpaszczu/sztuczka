@@ -25,7 +25,7 @@
         <td class="foto">
         <%= link_to image_tag(thing.foto.url(:kolo), class: 'img-circle'), thing_path(thing)%></td>
         <td><%= thing.title %></td>
-        <td><%= thing.opisik.first(280) %></td>
+        <td><%= thing.opisik %></td>
 
         <td><%= thing.meta.first(280) %></td>
 

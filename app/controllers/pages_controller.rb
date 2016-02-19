@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+
+  before_action :menu#Application
+
   def Home
   end
   def about
@@ -8,6 +11,8 @@ class PagesController < ApplicationController
 
   def spektakle
             @things = Thing.all.where(rodzaj: 'spektakl')
+
+
   end
   def warsztaty
             @things = Thing.all.where(rodzaj: 'warsztat')
