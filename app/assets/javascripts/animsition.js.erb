@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $(".animsition").animsition({
-    inClass: 'fade-in-up-sm',
-    outClass: 'fade-out-up-sm',
+    inClass: 'fade-in',
+    outClass: 'fade-out',
     inDuration: 1500,
     outDuration: 800,
     linkElement: '.animsition-link',
@@ -21,4 +21,8 @@ $(document).ready(function() {
     overlayParentElement : 'body',
     transition: function(url){ window.location.href = url; }
   });
+
+$('a').addClass('animsition-link');
+
+
 });

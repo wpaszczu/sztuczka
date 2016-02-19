@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Co:</strong>
+  <%= @news.co %>
+</p>
+
+<p>
+  <strong>Czego:</strong>
+  <%= @news.czego %>
+</p>
+
+<p>
+  <strong>Czas1:</strong>
+  <%= @news.czas1 %>
+</p>
+
+<p>
+  <strong>Czas2:</strong>
+  <%= @news.czas2 %>
+</p>
+
+<p>
+  <strong>Czas3:</strong>
+  <%= @news.czas3 %>
+</p>
+
+<%= link_to 'Edit', edit_news_path(@news) %> |
+<%= link_to 'Back', news_index_path %>

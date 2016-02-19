@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :news
   root 'pages#Home'
   get 'about' => 'pages#about'
   get 'contact' => 'pages#contact'

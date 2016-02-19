@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  co: MyText
+  czego: MyString
+  czas1: 2016-02-19 12:41:09
+  czas2: 2016-02-19 12:41:09
+  czas3: 2016-02-19 12:41:09
+
+two:
+  co: MyText
+  czego: MyString
+  czas1: 2016-02-19 12:41:09
+  czas2: 2016-02-19 12:41:09
+  czas3: 2016-02-19 12:41:09
