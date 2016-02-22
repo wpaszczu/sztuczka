@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :things
   resources :news
-  root 'news#index'
+  root 'pages#Home'
   get 'nowy' => 'news#new'
   get 'new' => 'news#new'
   get 'onas' => 'pages#about'
