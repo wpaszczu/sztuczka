@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   before_action :menu#Application
 
   def Home
-      @news = News.order(id: :desc).first(4)
+      @news = News.order(updated_at: :desc).first(4)
   end
   def about
   end

@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
   before_action :set_news, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:index, :new, :edit, :update, :destroy]
   before_action :menu#Application
 
 
@@ -8,7 +8,7 @@ class NewsController < ApplicationController
   # GET /news
   # GET /news.json
   def index
-    @news = News.all.order(id: :desc)
+    @news = News.all.order(updated_at: :desc)
   end
 
   # GET /news/1
