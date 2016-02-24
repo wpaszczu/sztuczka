@@ -9,4 +9,8 @@ has_attached_file :foto3, styles: { medium: "750x1080>", thumb: "75x108>", kolo:
 validates_attachment_content_type :foto3, content_type: /\Aimage\/.*\Z/
 
 belongs_to :user
+
+extend FriendlyId
+friendly_id :title, use: :slugged
+
 end

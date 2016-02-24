@@ -51,3 +51,4 @@ gem 'devise'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'jquery-mobile-rails-assets'
 gem 'devise-bootstrap-views' #bootstrap only for devise vievs
+gem 'friendly_id', '~> 5.1.0'
